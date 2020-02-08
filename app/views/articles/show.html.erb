@@ -1,7 +1,11 @@
-<h1>Article Entered</h1>
+<h1>Showind selected Article </h1>
 <p>
   Title: <%= @article.title %>
 </p>
 <p>
-  Description:: <%= @article.description %>
+  Description: <%= @article.description %>
 </p>
+
+<%= link_to 'Edit', edit_article_path(@article) %>
+ <br>
+<%= link_to 'Back to articles List', articles_path %>
