@@ -1,25 +1,25 @@
 @import "bootstrap/scss/bootstrap";
 
 .bg-custom {
-  background-color: 	#09568d;
+  background-color: 	#1b1716;
 }
 
 .center{
-  background: asset-url('dark.jpg') no-repeat  center fixed;
+  background: asset-url('dark1.jpg') no-repeat center center fixed;
   background-size: cover;
+  border: 1px solid #e2e2e2;
   height: 500px;
+  margin-top: 25px;
   margin-bottom: 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .center h1 {
   font-weight: bold;
-  color: white;
+  color: #212121;
   letter-spacing: -1px;
   margin-bottom: 25px;
+  margin-top: 35px;
 }
 
 footer {
