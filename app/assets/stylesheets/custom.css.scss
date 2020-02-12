@@ -7,7 +7,6 @@
 .center{
   background: asset-url('dark1.jpg') no-repeat center center fixed;
   background-size: cover;
-  border: 1px solid #e2e2e2;
   height: 500px;
   margin-top: 25px;
   margin-bottom: 45px;
@@ -24,11 +23,28 @@
 
 footer {
   border-top: 2px solid #e1e1e1;
-  margin-bottom: 5px;
+  margin-top: 15px;
   padding-top: 10px;
 }
 
 footer ul {
 float: right;
   list-style:none;
+}
+
+
+
+.form-inline .field_with_errors {
+  display: inline-block;
+}
+.bg-danger {
+  margin-bottom: 15px;
+}
+
+.bg-danger ul {
+  margin-top: -25px;
+}
+
+.article-actions{
+  padding-bottom: 10px;
 }

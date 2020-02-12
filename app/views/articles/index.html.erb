@@ -1,3 +1,4 @@
+<br>
 <h1>The list of artticles</h1>
 
 <p>
@@ -7,13 +8,11 @@
 <table style = "text-align:center;">
 
   <tr>
-    <th>ID</th>
     <th>Title</th>
     <th>Description</th>
   </tr>
   <% @articles.each do |article| %>
   <tr>
-    <td><%= article.id %></td>
     <td><%= article.title %></td>
     <td><%= article.description %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>
