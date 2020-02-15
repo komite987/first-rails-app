@@ -16,7 +16,7 @@
 
 
 
-<%= form_for @article do |f| %>
+<%= form_with(model: @article)  do |f| %>
 <div class="form-group row">
   <div  class="col-sm-2 col-form-label text-right">
     <%= f.label :title %>
