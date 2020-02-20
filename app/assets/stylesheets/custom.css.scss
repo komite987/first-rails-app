@@ -1,5 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 
+
+
 .bg-custom {
   background-color: 	#1b1716;
 }
@@ -51,5 +53,8 @@ float: right;
 
 .user-details-small {
   border-top: 1px solid #a2a2a2;
+}
 
+.body {
+  padding-top: 8px;
 }
