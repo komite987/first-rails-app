@@ -1,11 +1,9 @@
-<h1 class= "text-center">Welcome <%= "#{@user.username}"%> </h1>
+<h1 class= "text-center title">Welcome <%= "#{@user.username}'s Page"%> </h1>
 <div class="row">
   <div class="col-sm-4 offset-4 text-center">
     <%= image_tag gravatar_for(@user, 125), class:'rounded-circle' %>
   </div>
 </div>
-
-<h2 class="text-center">Your artticles</h2>
 <br>
 
 <%= render 'articles', obj: @user.articles %>

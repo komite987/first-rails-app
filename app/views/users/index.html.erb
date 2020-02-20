@@ -1,0 +1,17 @@
+<h1 class="text-center title">All Delta bloggers</h1>
+<br>
+<div class="card-deck text-center">
+  <% @users.each do |user| %>
+  <div class="col-sm-4 text-center">
+    <div class="card border-0 ">
+
+      <%= image_tag gravatar_for(user, 100), class:" rounded-circle image" %>
+      <div class="card-body">
+        <h5><%= link_to user.username , user_path(user), class:"card-title btn btn-info"  %></h5>
+        <p class="card-text"><small class="text-muted"><%= pluralize(user.articles.count, "article") %></small></p>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <% end %>
+</div>
