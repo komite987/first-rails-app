@@ -1,5 +1,7 @@
 <h1 class="text-center title">All Delta bloggers</h1>
 <br>
+<%= will_paginate(@users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer) %>
+
 <div class="card-deck text-center">
   <% @users.each do |user| %>
   <div class="col-sm-4 text-center">
@@ -15,3 +17,4 @@
   </div>
   <% end %>
 </div>
+<%= will_paginate(@users, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer) %>
