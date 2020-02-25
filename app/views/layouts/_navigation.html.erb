@@ -22,14 +22,27 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
+      </li> &nbsp;
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <ul class="navbar-nav">
+
+    <%= link_to 'Log in', login_path, class: "nav-link btn btn-outline-primary" %>
+    &nbsp;&nbsp;
+    <%= link_to 'Log out', logout_path, method: :delete, class: "nav-link btn btn-outline-danger" %>&nbsp;&nbsp;
+    <li class="nav-item dropdown user-actions">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        User Actions
+      </a>
+      <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+      </div>
+    </li>
+</ul>
   </div>
+
 </nav>

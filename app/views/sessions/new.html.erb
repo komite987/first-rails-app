@@ -1,0 +1,27 @@
+<h1 class="text-center title">Log in Delta Blog</h1>
+<br>
+<%= form_with(scope: :session, url: login_path, local:true) do |f| %>
+<div class="form-group row">
+<div  class="col-sm-2 col-form-label text-right">
+  <%= f.label :email %>
+</div>
+<div class="col-sm-8">
+<%= f.email_field :email, class: "form-control", placeholder: "Enter your email", autofocus: true %>
+</div>
+</div>
+
+<div class="form-group row">
+<div  class="col-sm-2 col-form-label text-right">
+<%= f.label :password %>
+</div>
+<div class="col-sm-8">
+<%= f.password_field :password, class: "form-control", placeholder: "Enter your password" %>
+</div>
+</div>
+
+<div class="form-group row">
+<div class="offset-sm-2 col-sm-10">
+  <%= f.submit 'Log in', class: 'btn btn-primary' %>
+</div>
+</div>
+<% end %>
