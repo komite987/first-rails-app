@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-  <%= link_to 'MY BLOG', root_path, class: "navbar-brand", id: "logo" %>
+  <%= link_to 'DELTA BLOG', root_path, class: "navbar-brand", id: "logo" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,37 +12,40 @@
       <li class="nav-item">
         <%= link_to 'Users', users_path, class: "nav-link" %>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Actions
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to 'New article', new_article_path, class: "dropdown-item" %>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li> &nbsp;
+      <% if logged_in? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Actions
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to 'New article', new_article_path, class: "dropdown-item" %>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      <% end %>
+      &nbsp;
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </ul>
     <ul class="navbar-nav">
-
-    <%= link_to 'Log in', login_path, class: "nav-link btn btn-outline-primary" %>
-    &nbsp;&nbsp;
-    <%= link_to 'Log out', logout_path, method: :delete, class: "nav-link btn btn-outline-danger" %>&nbsp;&nbsp;
-    <li class="nav-item dropdown user-actions">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        User Actions
-      </a>
-      <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-      </div>
-    </li>
-</ul>
+      <% if logged_in? %>
+        <%= link_to '<button type="button" class="btn btn-outline-danger">Log out</button>'.html_safe, logout_path, method: :delete %>
+        <li class="nav-item dropdown user-actions">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User Actions
+          </a>
+          <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown">
+            <%= link_to 'Profile', user_path(current_user), class: "dropdown-item" %>
+            <%= link_to 'Edit Account', edit_user_path(current_user), class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <%= link_to '<button type="button" class="btn btn-outline-primary">Log in </button>'.html_safe, login_path %>
+      <% end %>
+    </ul>
   </div>
-
 </nav>

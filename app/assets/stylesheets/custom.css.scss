@@ -9,8 +9,8 @@
 
 .center{
   background: asset-url('dark1.jpg') no-repeat center center ;
-  background-size: cover;
-  height: 500px;
+  background-size: contain;
+  height: 70vh;
   margin-top: 25px;
   margin-bottom: 45px;
   text-align: center;
@@ -86,4 +86,8 @@ float: right;
 
 .dropdown-menu {
   margin-top: 10px;
+}
+
+.btn-outline-danger:hover {
+  
 }
