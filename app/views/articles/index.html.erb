@@ -1,10 +1,10 @@
 <br>
 <h2 class="text-center title">The list of all articles</h2>
 <br>
-<div class="pagination">
+<div class="pagination text-center">
 <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer) %>
 </div>
 <%= render 'users/articles', obj: @articles %>
-<div class="pagination">
+<div class="pagination text-center">
 <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer) %>
 </div>

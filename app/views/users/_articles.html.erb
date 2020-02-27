@@ -1,11 +1,11 @@
 
 <% obj.each do |article| %>
-<div class="row">
-  <div class="col-sm-8 offset-2">
+<div class="row text-center">
+  <div class="col-8 offset-2 text-center">
     <div class="card text-center">
-      <h4 class="card-header"><%= link_to article.title, article_path(article)  %></h4>
-      <div class="body"><%= truncate(article.description, length: 75) %></div>
-      <div class="user-details">
+      <h4 class="card-header text-center"><%= link_to article.title, article_path(article)  %></h4>
+      <div class="body text-center"><%= truncate(article.description, length: 75) %></div>
+      <div class="user-details text-center">
         <small class="user-details-small">
                         Created by: <%= article.user.username %>
                         <%= time_ago_in_words(article.created_at) %> ago,

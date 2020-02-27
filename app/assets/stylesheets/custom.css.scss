@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
 
 .bg-custom {
   background-color: 	#1b1716;
@@ -26,7 +35,6 @@
 
 footer {
   border-top: 2px solid #e1e1e1;
-  margin-top: 15px;
   padding-top: 10px;
 }
 
@@ -91,4 +99,8 @@ float: right;
 .card{
   margin: 10px auto;
   padding-top: 10px;
+}
+
+.navbar-collapse .btn {
+  width: 100%
 }
