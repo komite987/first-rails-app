@@ -27,13 +27,13 @@
       <% end %>
       &nbsp;
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-md-0 nav-button" type="submit">Search</button>
       </form>
     </ul>
     <ul class="navbar-nav">
       <% if logged_in? %>
-        <%= link_to '<button type="button" class="btn btn-outline-danger">Log out</button>'.html_safe, logout_path, method: :delete %>
+        <%= link_to '<button type="button" class="btn btn-outline-danger nav-button">Log out</button>'.html_safe, logout_path, method: :delete %>
         <li class="nav-item dropdown user-actions">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             User Actions <%= "/ Admin" if current_user.admin? %>
@@ -44,7 +44,7 @@
           </div>
         </li>
       <% else %>
-        <%= link_to '<button type="button" class="btn btn-outline-primary">Log in </button>'.html_safe, login_path %>
+        <%= link_to '<button type="button" class="btn btn-outline-primary nav-button">Log in </button>'.html_safe, login_path %>
       <% end %>
     </ul>
   </div>

@@ -98,9 +98,19 @@ float: right;
 
 .card{
   margin: 10px auto;
-  padding-top: 10px;
 }
 
-.navbar-collapse .btn {
-  width: 100%
+@media screen and (max-width: 991px) {
+  .nav-button {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .my-2 .mr-lg-2 {
+    margin-bottom: 8px;
+    width: 100%
+  }
+}
+
+.rounded-circle {
+  padding-top: 3px;
 }
