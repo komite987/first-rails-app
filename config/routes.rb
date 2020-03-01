@@ -1,21 +1,26 @@
 Rails.application.routes.draw do
 
+
   get 'sessions/new'
+
   get 'users/new'
-resources :articles
 
-root 'welcome#home'
+  resources :articles
 
-get 'about', to: 'welcome#about'
+  root 'welcome#home'
 
-get 'signup', to: 'users#new'
+  get 'about', to: 'welcome#about'
 
-resources :users, except: [:new]
+  get 'signup', to: 'users#new'
 
-get 'login', to: 'sessions#new'
+  resources :users, except: [:new]
 
-post 'login', to: 'sessions#create'
+  get 'login', to: 'sessions#new'
 
-delete 'logout', to: 'sessions#destroy'
+  post 'login', to: 'sessions#create'
+
+  delete 'logout', to: 'sessions#destroy'
+
+  resources :categories, except: [:destroy]
 
 end

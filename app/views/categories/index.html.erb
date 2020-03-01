@@ -1,0 +1,19 @@
+<br>
+<h1 class="text-center title">
+  All Categories
+</h1>
+<br>
+<%= will_paginate(@categories, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer) %>
+<div class="card-deck text-center">
+  <% @categories.each do |category| %>
+    <div class="col-6 text-center offset-3">
+      <div class="card">
+        <div class="card-body">
+          <h5><%= link_to category.name, category_path(category) %></h5>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<br>
+<%= will_paginate(@categories, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer) %>
