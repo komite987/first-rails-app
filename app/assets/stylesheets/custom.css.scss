@@ -57,7 +57,8 @@ float: right;
 }
 
 .user-details {
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .user-details-small {
@@ -114,7 +115,15 @@ float: right;
   }
 }
 
-
 .rounded-circle {
   padding-top: 2px;
+}
+
+ul.pagination li.page-item a {
+  border-radius: 44px !important;
+  margin: 0 5px !important;
+}
+
+li.prev, li.next a.page-link {
+  display: none !important;
 }

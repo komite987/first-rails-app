@@ -1,7 +1,7 @@
 <br>
 
 <div class="row ">
-  <div class="col-10 col-sm-10 offset-1 ">
+  <div class="col-10 col-lg-6 offset-lg-3 col-md-8 offset-md-2 offset-1 ">
         <div class="card border-0 text-center">
           <small>Created by:</small>
           <%= image_tag gravatar_for(@article.user, 100), class:" rounded-circle image" %>
@@ -12,8 +12,8 @@
         </div>
 
     <div class="card text-center">
-      <h3 class="card-header">Title: <%= @article.title %> </h3>
-      <h4> Description: </h4>
+      <h4 class="card-header">Title: <%= @article.title %> </h4>
+      <h5> Description: </h5>
       <%= simple_format(@article.description) %>
       <div class="article-actions">
         <% if logged_in? && (current_user == @article.user || current_user.admin? )%>
