@@ -131,9 +131,13 @@ li.prev, li.next a.page-link {
 
 .card-header{
   background-color: #d4d9dd;
-  font-size: 1.10em;
+  font-size: 1rem;
+  padding: auto;
 }
 
+.card-body{
+  font-size: 1rem;
+}
 .card-header {
 	a {
 		color: #424246;
@@ -185,4 +189,8 @@ li.prev, li.next a.page-link {
 			}
 		}
 	}
+}
+
+h1 {
+  font-size: 2.1rem !important;
 }
