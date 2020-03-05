@@ -141,7 +141,6 @@ li.prev, li.next a.page-link {
 .card-header {
 	a {
 		color: #424246;
-		margin: 0 20px;
 		padding: 5px 0;
 		position: relative;
 		@include transition(.3s ease-out .1s);
@@ -155,8 +154,9 @@ li.prev, li.next a.page-link {
 			top: 0;
 			visibility: hidden;
 			@include transition (.3s);
-
-
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 		}
 		&::after {
 			height: 2px;
@@ -193,14 +193,4 @@ li.prev, li.next a.page-link {
 
 h1 {
   font-size: 2.1rem !important;
-}
-
-.card_header {
-  width: 100% !important;
-
-}
-
-.card_header a {
-  font-size: 100%;
-  width: 100% !important;
 }
