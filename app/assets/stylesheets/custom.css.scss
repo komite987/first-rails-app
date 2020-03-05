@@ -196,9 +196,11 @@ h1 {
 }
 
 .card_header {
-  width: 80%;
+  width: 100% !important;
+
 }
 
 .card_header a {
   font-size: 100%;
+  width: 100% !important;
 }
