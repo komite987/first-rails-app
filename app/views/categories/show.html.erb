@@ -1,2 +1,17 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<h1 class= "title text-center"> <%= @category.name.capitalize %> Articles </h1>
+<% if logged_in? && current_user.admin? %>
+<div class="text-center">
+  <%= link_to 'Edit', edit_category_path(@category), class: "badge badge-info" %>
+  <%= link_to 'Delete', category_path(@category),method: :delete, class: "badge badge-warning", data: {confirm: 'Are you sure to delete this category?'} %>
+</div>
+<% end %>
+<br>
+
+
+<div class="pagination text-center">
+<%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer) %>
+</div>
+<%= render 'users/articles', obj: @category_articles %>
+<div class="pagination text-center">
+<%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer) %>
+</div>

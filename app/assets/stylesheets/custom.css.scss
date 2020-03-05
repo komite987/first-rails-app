@@ -53,20 +53,18 @@ float: right;
 
 .article-actions{
   padding-bottom: 10px;
-  padding-top: 5px;
+  margin-top: 8px;
 }
 
-.user-details {
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
+
 
 .user-details-small {
   border-top: 1px solid #a2a2a2;
 }
 
 .body {
-  padding-top: 8px;
+  padding-top: 5px;
+  margin-bottom: -10px;
 }
 
 .image {
@@ -115,15 +113,75 @@ float: right;
   }
 }
 
-.rounded-circle {
-  padding-top: 2px;
+.card-content{
+  padding-top: 10px;
 }
-
 ul.pagination li.page-item a {
-  border-radius: 44px !important;
+  border: none !important;
   margin: 0 5px !important;
 }
 
 li.prev, li.next a.page-link {
   display: none !important;
+}
+
+.badge {
+  text-transform: uppercase;
+}
+
+.card-header{
+  background-color: #d4d9dd;
+}
+
+.card-header {
+	a {
+		color: #424246;
+		margin: 0 20px;
+		padding: 5px 0;
+		position: relative;
+		@include transition(.3s ease-out .1s);
+		&::before {
+			height: 2px;
+			width: 100%;
+			background: #212121;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			visibility: hidden;
+			@include transition (.3s);
+
+
+		}
+		&::after {
+			height: 2px;
+			width: 100%;
+			background: #212121;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 100%;
+			visibility: hidden;
+			@include transition (.3s);
+
+		}
+		&:hover{
+			color: #212121;
+      text-decoration: none;
+
+			&::before {
+				visibility: visible;
+				top: 100%;
+				background: #212121;
+
+
+			}
+			&::after {
+				visibility: visible;
+				top: 0;
+				background: #212121;
+
+			}
+		}
+	}
 }

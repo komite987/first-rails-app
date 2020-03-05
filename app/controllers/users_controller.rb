@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_action :require_user, only: [:edit, :update, :destroy]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   before_action :require_admin, only: [:destroy]
+  before_action :not_delete_admin, only: [:destroy]
+
 
   def new
     @user = User.new
@@ -67,4 +69,13 @@ class UsersController < ApplicationController
        redirect_to root_path
      end
    end
+
+   def not_delete_admin
+     if @user.admin?
+       flash[:danger] = "Can't delete admin"
+       redirect_to users_path
+     end
+
+   end
+
 end

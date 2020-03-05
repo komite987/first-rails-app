@@ -13,17 +13,7 @@
         <%= link_to 'Users', users_path, class: "nav-link" %>
       </li>
       <% if logged_in? %>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Actions
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to 'New article', new_article_path, class: "dropdown-item" %>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
+            <%= link_to 'New article', new_article_path, class: "nav-link" %>
       <% end %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,10 +32,6 @@
         </div>
       </li>
       &nbsp;
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-md-0 nav-button" type="submit">Search</button>
-      </form>
     </ul>
     <ul class="navbar-nav">
       <% if logged_in? %>
