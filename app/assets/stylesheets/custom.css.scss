@@ -131,14 +131,12 @@ li.prev, li.next a.page-link {
 
 .card-header{
   background-color: #d4d9dd;
-  font-size: 1em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 1.1em;
 }
 
 .card-body{
   font-size: 1rem;
+  width: 100%;
 }
 .card-header {
 	a {
